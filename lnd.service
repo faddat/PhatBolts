@@ -2,6 +2,7 @@
 Description=lnd
 
 [Service]
+WorkingDirectory=/root/
 ExecStart=/usr/bin/lnd --bitcoin.active --bitcoin.node=bitcoind --externalip=555.555.555.555 --bitcoin.mainnet --alias=DroneEnergy --color=#6116bc --rpclisten=0.0.0.0:10009 --tlsextraip=555.555.555.555
 Restart=always
 
