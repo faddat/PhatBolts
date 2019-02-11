@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Welcoming the user
 echo "Get ready for some PhatBolts!"
 echo "Please run this only on Ubuntu 18.10"
