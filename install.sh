@@ -23,7 +23,7 @@ cp lnd-linux-amd64-v0.5.2-beta/* /usr/bin
 echo "Installing unit files"
 wget https://github.com/faddat/PhatBolts/raw/master/bitcoind.service -P /etc/systemd/system/
 wget https://github.com/faddat/PhatBolts/raw/master/lnd.service -P /etc/systemd/system/
-sed -i -e 's/555.555.555.555/$ip/g' /etc/systemd/system/lnd.service
+sed -i -e "s/555.555.555.555/$ip/g" /etc/systemd/system/lnd.service
 
 echo "Enabling systemd units and starting services"
 
