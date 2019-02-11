@@ -9,6 +9,9 @@ apt install software-properties-common wget
 echo "Please enter your public IP address and press enter when finished."
 read ip
 
+echo "Please choose an alias for your node"
+read alias
+
 echo "Installing Bitcoind and updating all apt packages"
 add-apt-repository ppa:bitcoin/bitcoin
 apt-get update
@@ -24,6 +27,7 @@ echo "Installing unit files"
 wget https://github.com/faddat/PhatBolts/raw/master/bitcoind.service -P /etc/systemd/system/
 wget https://github.com/faddat/PhatBolts/raw/master/lnd.service -P /etc/systemd/system/
 sed -i -e "s/555.555.555.555/$ip/g" /etc/systemd/system/lnd.service
+sed -i -e "s/DroneEnergy/$alias/g" /etc/systemd/system/lnd.service
 
 echo "Enabling systemd units and starting services"
 
