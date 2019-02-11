@@ -24,5 +24,5 @@ Yes, it's basically that easy.  For now, the user is responsible for picking up 
 
 At this point I haven't tested the security of this setup to any appreciable degree.  As I do that, or others make recommendations, I'll be putting that information here and adjusting the code as needed.  
 
-# This here is in my estimation an excellent one-trick pony.  I do not recommend that you ask it to do other tricks, that would probably be bad.  
+# PB is a one-trick pony.  If you ask it to do tricks other than turning a VPS or bare-metal server into a lightning node super-easily, you are going to be disappointed.  Please don't.  
 
