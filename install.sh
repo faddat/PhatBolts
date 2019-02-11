@@ -13,7 +13,7 @@ echo "Installing Bitcoind and updating all apt packages"
 add-apt-repository ppa:bitcoin/bitcoin
 apt-get update
 apt upgrade
-apt install bitcoin
+apt install bitcoind
 
 echo "Installing LND"
 wget https://github.com/lightningnetwork/lnd/releases/download/v0.5.2-beta/lnd-linux-amd64-v0.5.2-beta.tar.gz
