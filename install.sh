@@ -8,6 +8,7 @@ apt install software-properties-common wget
 # Asking the user to enter their IP address and taking their input
 echo "Please enter your public IP address and press enter when finished."
 read ip
+echo ".Your IP address is $ip."
 
 echo "Please choose an alias for your node"
 read alias
