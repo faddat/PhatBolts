@@ -34,4 +34,5 @@ echo "Enabling systemd units and starting services"
 systemctl enable bitcoind
 systemctl enable lnd
 systemctl start bitcoind
+sleep 60
 systemctl start lnd
