@@ -12,11 +12,13 @@ read ip
 echo "Please choose an alias for your node"
 read alias
 
-echo "Installing Bitcoind and updating all apt packages"
+echo "Installing Bitcoind, updating all apt packages, and removing default systemd unit"
 add-apt-repository ppa:bitcoin/bitcoin
 apt-get update
 apt upgrade
 apt install bitcoind
+rm /etc/systemd/system/multi-user.target.wants/bitcoind.service
+
 
 echo "Installing LND"
 wget https://github.com/lightningnetwork/lnd/releases/download/v0.5.2-beta/lnd-linux-amd64-v0.5.2-beta.tar.gz
@@ -34,5 +36,5 @@ echo "Enabling systemd units and starting services"
 systemctl enable bitcoind
 systemctl enable lnd
 systemctl start bitcoind
-sleep 60
+sleep 5
 systemctl start lnd
