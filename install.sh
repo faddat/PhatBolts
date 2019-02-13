@@ -20,11 +20,14 @@ apt upgrade
 apt install bitcoind
 rm /etc/systemd/system/multi-user.target.wants/bitcoind.service
 
-
 echo "Installing LND"
 wget https://github.com/lightningnetwork/lnd/releases/download/v0.5.2-beta/lnd-linux-amd64-v0.5.2-beta.tar.gz
 tar xvf lnd-linux-amd64-v0.5.2-beta.tar.gz
 cp lnd-linux-amd64-v0.5.2-beta/* /usr/bin
+
+echo "fetching config file"
+mkdir /root/.bitcoin
+wget https://github.com/faddat/PhatBolts/raw/master/bitcoin.conf -P /root/.bitcoin
 
 echo "Installing unit files"
 wget https://github.com/faddat/PhatBolts/raw/master/bitcoind.service -P /etc/systemd/system/
@@ -37,5 +40,5 @@ echo "Enabling systemd units and starting services"
 systemctl enable bitcoind
 systemctl enable lnd
 systemctl start bitcoind
-sleep 5
+sleep 10
 systemctl start lnd
