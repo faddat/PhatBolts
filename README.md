@@ -24,7 +24,9 @@ Yes, it's basically that easy.  For now, the user is responsible for picking up 
 
 ## Security
 
-At this point I haven't tested the security of this setup to any appreciable degree.  As I do that, or others make recommendations, I'll be putting that information here and adjusting the code as needed.  
+The security of your lightning node is going to depend on:
 
-# PB is a one-trick pony.  If you ask it to do tricks other than turning a VPS or bare-metal server into a lightning node super-easily, you are going to be disappointed.  Please don't.  
-
+* You keeping your key seed
+* Strength of the password you use to encrypt the key on your machine
+* Limiting access to your machine
+* Treating your macaroon file and tls file like they're money
