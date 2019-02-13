@@ -20,6 +20,8 @@ Yes, it's basically that easy.  For now, the user is responsible for picking up 
 * /root/.lnd/data/chain/bitcoin/mainnet/admin.macaroon
 * /root/.lnd/tls.cert
 
+-- after the install is complete, feel free to check on the status of LND with `systemctl status lnd`.  Then, you should see it asking you to run `lncli create`.  Youl'll then preserve your 24 words very carefully, and choose a password to encrypt your wallet.  Finally, you'll want to run `lncli unlock` and enter your password.  Then, LND will begin running.  To verify that, you can use `systemctl status lnd`.  
+
 ## Security
 
 At this point I haven't tested the security of this setup to any appreciable degree.  As I do that, or others make recommendations, I'll be putting that information here and adjusting the code as needed.  
